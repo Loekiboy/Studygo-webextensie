@@ -28,3 +28,4 @@ package-lock.json
 # Test files (local testing only)
 test-studygo.html
 standalone-test.html
+node_modules/
