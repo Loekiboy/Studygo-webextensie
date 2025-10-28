@@ -179,7 +179,7 @@ Als je de extensie wilt aanpassen voor een nieuwe website of structuur:
 
 ## 🔄 Versie Informatie
 
-Deze troubleshooting guide is voor extensie versie **1.0**.
+Deze troubleshooting guide is voor extensie versie **1.0.1** en hoger.
 
 Als je een oudere versie hebt:
 1. Download de nieuwste versie van GitHub
