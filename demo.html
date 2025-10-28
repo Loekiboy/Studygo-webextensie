@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyGo Demo - Woordenlijst Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .info {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .word-list {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        table.words {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table.words th {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        table.words td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        table.words tr:hover {
+            background-color: #f5f5f5;
+        }
+        .studygo-list {
+            list-style: none;
+            padding: 0;
+        }
+        .word-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .word-item:hover {
+            background-color: #f9f9f9;
+        }
+        .term {
+            font-weight: bold;
+            color: #2196F3;
+        }
+        .definition {
+            color: #666;
+        }
+        .test-result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 4px;
+            display: none;
+        }
+        .test-result.success {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        .test-result.error {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+        #clipboard-content {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 10px;
+            margin-top: 10px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>📚 StudyGo Demo - Woordenlijst Test</h1>
+    
+    <div class="info">
+        <strong>ℹ️ Instructies:</strong>
+        <p>Deze pagina simuleert een StudyGo woordenlijst om de extensie te testen. Als de extensie correct is geïnstalleerd, zou je een groene "📋 Kopieer Woordenlijst" knop moeten zien boven elke woordenlijst hieronder.</p>
+        <p><strong>Let op:</strong> Deze demo pagina werkt alleen als je de URL aanpast zodat deze "studygo.com" bevat, of als je de extensie handmatig laadt.</p>
+    </div>
+
+    <h2>Test 1: Tabel Format (Engels - Nederlands)</h2>
+    <div class="word-list">
+        <table class="words">
+            <thead>
+                <tr>
+                    <th>Engels</th>
+                    <th>Nederlands</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>apple</td>
+                    <td>appel</td>
+                </tr>
+                <tr>
+                    <td>banana</td>
+                    <td>banaan</td>
+                </tr>
+                <tr>
+                    <td>orange</td>
+                    <td>sinaasappel</td>
+                </tr>
+                <tr>
+                    <td>strawberry</td>
+                    <td>aardbei</td>
+                </tr>
+                <tr>
+                    <td>grape</td>
+                    <td>druif</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>Test 2: List Format (Frans - Nederlands)</h2>
+    <div class="word-list">
+        <ul class="studygo-list">
+            <li class="word-item">
+                <span class="term">bonjour</span>
+                <span class="definition">goedendag</span>
+            </li>
+            <li class="word-item">
+                <span class="term">merci</span>
+                <span class="definition">dank je</span>
+            </li>
+            <li class="word-item">
+                <span class="term">au revoir</span>
+                <span class="definition">tot ziens</span>
+            </li>
+            <li class="word-item">
+                <span class="term">s'il vous plaît</span>
+                <span class="definition">alstublieft</span>
+            </li>
+            <li class="word-item">
+                <span class="term">pardon</span>
+                <span class="definition">pardon</span>
+            </li>
+        </ul>
+    </div>
+
+    <h2>Test 3: Div Format (Duits - Nederlands)</h2>
+    <div class="word-list">
+        <div class="studygo-list">
+            <div class="word-row">
+                <div class="term">Guten Tag</div>
+                <div class="definition">goedendag</div>
+            </div>
+            <div class="word-row">
+                <div class="term">Danke</div>
+                <div class="definition">dank je</div>
+            </div>
+            <div class="word-row">
+                <div class="term">Auf Wiedersehen</div>
+                <div class="definition">tot ziens</div>
+            </div>
+            <div class="word-row">
+                <div class="term">Bitte</div>
+                <div class="definition">alstublieft</div>
+            </div>
+            <div class="word-row">
+                <div class="term">Entschuldigung</div>
+                <div class="definition">sorry</div>
+            </div>
+        </div>
+    </div>
+
+    <h2>🧪 Manual Test Area</h2>
+    <div class="info">
+        <p>Klik op een "Kopieer Woordenlijst" knop en plak de inhoud hieronder om te verifiëren:</p>
+        <button onclick="pasteFromClipboard()" style="padding: 10px 20px; background-color: #2196F3; color: white; border: none; border-radius: 4px; cursor: pointer;">
+            📋 Plak vanuit Klembord
+        </button>
+        <div id="clipboard-content"></div>
+        <div id="test-result" class="test-result"></div>
+    </div>
+
+    <script>
+        async function pasteFromClipboard() {
+            const contentDiv = document.getElementById('clipboard-content');
+            const resultDiv = document.getElementById('test-result');
+            
+            try {
+                const text = await navigator.clipboard.readText();
+                contentDiv.textContent = text;
+                
+                // Verify format
+                const lines = text.trim().split('\n');
+                let isValid = true;
+                
+                if (lines.length === 0) {
+                    isValid = false;
+                } else {
+                    for (const line of lines) {
+                        if (!line.includes('\t')) {
+                            isValid = false;
+                            break;
+                        }
+                    }
+                }
+                
+                if (isValid) {
+                    resultDiv.className = 'test-result success';
+                    resultDiv.textContent = `✅ Succes! ${lines.length} woordparen gekopieerd in Quizlet-formaat (woord TAB definitie)`;
+                } else {
+                    resultDiv.className = 'test-result error';
+                    resultDiv.textContent = '❌ Formaat lijkt niet correct. Verwacht formaat: woord TAB definitie per regel';
+                }
+                resultDiv.style.display = 'block';
+                
+            } catch (err) {
+                contentDiv.textContent = 'Fout bij lezen van klembord: ' + err.message;
+                resultDiv.className = 'test-result error';
+                resultDiv.textContent = '❌ Kon niet lezen van klembord. Zorg dat je toestemming hebt gegeven.';
+                resultDiv.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

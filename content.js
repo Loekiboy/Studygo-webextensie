@@ -71,12 +71,22 @@
         definition = definitionElement.textContent.trim();
       }
 
+      // Fallback: if we have a row but no term/definition found, try to split the row's text
+      if (!term || !definition) {
+        const cells = row.children;
+        if (cells.length >= 2) {
+          term = cells[0].textContent.trim();
+          definition = cells[1].textContent.trim();
+        }
+      }
+
       // If we found both term and definition, add to list
-      if (term && definition && term !== definition) {
+      if (term && definition && term !== definition && term.length > 0 && definition.length > 0) {
         wordPairs.push({ term, definition });
       }
     });
 
+    console.log(`[StudyGo Extension] Extracted ${wordPairs.length} word pairs from list`);
     return wordPairs;
   }
 
@@ -146,14 +156,17 @@
       if (success) {
         // Show success feedback
         const originalText = button.textContent;
-        button.textContent = '✓ Gekopieerd!';
+        button.textContent = `✓ Gekopieerd! (${wordPairs.length} woorden)`;
         button.classList.add('copied');
         setTimeout(() => {
           button.textContent = originalText;
           button.classList.remove('copied');
         }, 2000);
+        
+        console.log(`[StudyGo Extension] Successfully copied ${wordPairs.length} word pairs to clipboard`);
       } else {
         alert('Kopiëren mislukt. Probeer het opnieuw.');
+        console.error('[StudyGo Extension] Failed to copy to clipboard');
       }
     });
 
@@ -190,6 +203,11 @@
 
   // Initialize
   function init() {
+    const site = getCurrentSite();
+    if (site) {
+      console.log(`[StudyGo Extension] Extension loaded on ${site.name}`);
+    }
+    
     // Run on page load
     findAndProcessWordLists();
 
