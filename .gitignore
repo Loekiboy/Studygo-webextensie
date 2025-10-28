@@ -21,10 +21,11 @@ build/
 # SVG source (keeping only PNG icons)
 icons/icon.svg
 
-# Dependencies (if using npm in future)
+# Dependencies and test files (for testing only, not needed in production extension)
 node_modules/
+package.json
 package-lock.json
 
 # Test files (local testing only)
-test-studygo.html
-standalone-test.html
+*test*.html
+*test*.js
