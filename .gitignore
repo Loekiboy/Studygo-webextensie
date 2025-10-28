@@ -1,0 +1,26 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.log
+.cache/
+
+# Build artifacts (if any)
+dist/
+build/
+
+# SVG source (keeping only PNG icons)
+icons/icon.svg
+
+# Dependencies (if using npm in future)
+node_modules/
+package-lock.json
