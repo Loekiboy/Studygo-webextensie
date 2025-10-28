@@ -24,3 +24,7 @@ icons/icon.svg
 # Dependencies (if using npm in future)
 node_modules/
 package-lock.json
+
+# Test files (local testing only)
+test-studygo.html
+standalone-test.html
