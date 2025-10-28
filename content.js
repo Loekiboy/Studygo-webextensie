@@ -320,7 +320,7 @@
     }
     
     log(`Extension loaded on ${site.name}`);
-    log('Extension version: 1.0');
+    log('Extension version: 1.0.1');
     log('URL:', window.location.href);
     
     // Run on page load

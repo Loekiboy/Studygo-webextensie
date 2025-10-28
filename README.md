@@ -82,3 +82,24 @@ Dit project is open source en beschikbaar onder de MIT License.
 ## ⚠️ Disclaimer
 
 Deze extensie is niet officieel geassocieerd met StudyGo of JojoSchool. Het is een onafhankelijk hulpmiddel gemaakt om het kopiëren van woordenlijsten te vergemakkelijken.
+
+## 🔧 Problemen Oplossen
+
+Als de extensie niet werkt, zie [TROUBLESHOOTING.md](TROUBLESHOOTING.md) voor een uitgebreide troubleshooting guide.
+
+**Snelle diagnose:**
+1. Open de browser console (F12)
+2. Zoek naar berichten met `[StudyGo Extension]`
+3. Volg de instructies in de troubleshooting guide
+
+## 📝 Changelog
+
+### Versie 1.0.1 (Nieuwste)
+- ✅ Verwijderd deprecated `clipboardWrite` permissie (niet nodig in Manifest V3)
+- ✅ Uitgebreide debug logging toegevoegd
+- ✅ Veel meer CSS selectors voor betere compatibiliteit
+- ✅ Betere error handling en gebruikersfeedback
+- ✅ Pre-validatie van woordenlijsten voordat knoppen worden toegevoegd
+
+### Versie 1.0 (Initieel)
+- Basis functionaliteit voor StudyGo en JojoSchool

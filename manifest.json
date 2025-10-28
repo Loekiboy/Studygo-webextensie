@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "StudyGo & JojoSchool Woordenlijst Kopiëren",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "Voegt een 'Kopieer Woordenlijst' knop toe aan StudyGo en JojoSchool om woordenlijsten eenvoudig te kopiëren",
   "content_scripts": [
     {
