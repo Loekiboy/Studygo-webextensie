@@ -94,7 +94,17 @@ Als de extensie niet werkt, zie [TROUBLESHOOTING.md](TROUBLESHOOTING.md) voor ee
 
 ## 📝 Changelog
 
-### Versie 1.0.1 (Nieuwste)
+### Versie 1.0.2 (Nieuwste)
+- ✅ **Ondersteuning voor StudyGo practice/results pagina's** met feedback indicatoren (✓/✗)
+- ✅ Automatisch filteren van "Jouw antwoord:" tekst bij onjuiste antwoorden
+- ✅ Detectie en overslaan van tabel headers (Engels/Nederlands, etc.)
+- ✅ Verbeterde extractie voor geneste HTML structuren in practice mode
+- ✅ Extra selectors voor practice-, result-, exercise- en quiz-pagina's
+- ✅ `cleanText()` functie om feedback symbolen te verwijderen
+- ✅ `isHeaderRow()` functie voor header detectie
+- ✅ Volledig backward compatible met bestaande functionaliteit
+
+### Versie 1.0.1
 - ✅ Verwijderd deprecated `clipboardWrite` permissie (niet nodig in Manifest V3)
 - ✅ Uitgebreide debug logging toegevoegd
 - ✅ Veel meer CSS selectors voor betere compatibiliteit
