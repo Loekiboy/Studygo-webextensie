@@ -3,9 +3,6 @@
   "name": "StudyGo & JojoSchool Woordenlijst Kopiëren",
   "version": "1.0",
   "description": "Voegt een 'Kopieer Woordenlijst' knop toe aan StudyGo en JojoSchool om woordenlijsten eenvoudig te kopiëren",
-  "permissions": [
-    "clipboardWrite"
-  ],
   "content_scripts": [
     {
       "matches": [
